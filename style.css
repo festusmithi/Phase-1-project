@@ -1,0 +1,105 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: header;
+  position: fixed;
+  height: 20vh;
+  width: 100%;
+  z-index: 1;
+  background: rgb(54, 53, 53);
+  box-shadow: 1px 16px 19px -5px rgba(231, 234, 236, 0.86);
+  -webkit-box-shadow: 1px 16px 19px -5px rgba(195, 199, 202, 0.86);
+  -moz-box-shadow: 1px 16px 19px -5px rgba(235, 237, 238, 0.86);
+  border-bottom: none;
+  color: #fff;
+}
+
+.store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#store-logo img {
+  width: 3em;
+  margin-right: 1em;
+}
+#store-heading {
+  font-size: 2em;
+  font-weight: 400;
+}
+#store-heading span {
+  color: red;
+  font-weight: 500;
+}
+
+main {
+  grid-area: main;
+  padding-top: 25vh;
+  background-color: #000;
+  scroll-margin-top: 20vh;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-left: 0.05em solid red;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #fff;
+  z-index: 1;
+  height: 25vh;
+  width: 100%;
+  border-bottom: none;
+  background-color: rgba(5, 5, 5, 0.479);
+}
+
+div.shoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+}
+.shoes > div {
+  position: relative;
+  width: 15em;
+  height: 15em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  /* border: 2px solid; */
+  align-items: center;
+  background-color: rgba(196, 194, 194, 0.637);
+  box-shadow: 1px 16px 0px 0px rgba(209, 214, 218, 0.849);
+  -webkit-box-shadow: 1px 0px 19px 0px rgba(195, 199, 202, 0.2);
+  -moz-box-shadow: 1px 0px 0px 0px rgba(235, 237, 238, 0.2);
+}
+
+.shoe-image {
+  position: absolute;
+  width: 99.7%;
+  height: 100%;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  border-radius: inherit;
+}
